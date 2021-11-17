@@ -1,22 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 function App() {
-
-  setInterval(updateTime, 1000);
-
-  const now = new Date().toLocaleTimeString();
-
-  const [time, setTime] = useState(now);
-
-  function updateTime() {
-    const newTime = new Date().toLocaleTimeString();
-    setTime(newTime);
-  };
-
   return (
     <div className="container">
-      <h1>{time}</h1>
-      <button onClick={updateTime}>Get Time</button>
+      <h1>Hello</h1>
+      <input type="text" placeholder="What's your name?" />
+      <button>Submit</button>
     </div>
   );
 }
