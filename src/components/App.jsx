@@ -1,26 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 
 function App() {
-
-  const [name, setName] = useState("");
-  const [headingText, setHeading] = useState("");
-
-  function handleChange(event) {
-    setName(event.target.value);
-  }
-
-  function handleClick(event) {
-    setHeading(name);
-
-    event.preventDefault();
-  }
-
   return (
     <div className="container">
-      <form onSubmit={handleClick}>
-        <h1>Hello {headingText}</h1>
-        <input onChange={handleChange} type="text" placeholder="What's your name?" value={name} />
-        <button type="button" onClick={handleClick}> Submit</button>
+      <h1>Hello</h1>
+      <form>
+        <input name="fName" placeholder="First Name" />
+        <input name="lName" placeholder="Last Name" />
+        <button>Submit</button>
       </form>
     </div>
   );
